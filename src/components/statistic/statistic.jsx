@@ -1,0 +1,32 @@
+import PropTypes from 'prop-types';
+import statsCss from './stats.module.css'
+
+export function Statistic ({title, stats}){
+return (<section className={statsCss.statistic}>
+<h2>{title}</h2>
+
+<ul className={statsCss.item}>
+    {stats.map(({id, label, percentage})=>{
+        return (
+        <li  className={statsCss.list} key={id}>
+            <span>{label}</span>
+            <span>{percentage}</span>
+        </li>)
+        
+    })}
+</ul>
+
+
+</section>)
+}
+
+Statistic.propTypes = {
+    stats: PropTypes.arrayOf (PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired
+    })),
+    title: PropTypes.string,
+
+
+}
