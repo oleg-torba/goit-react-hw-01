@@ -18,3 +18,13 @@
     display: flex;
     flex-direction: column;
 }
+.itemTitle{
+    color: grey;
+    font-size: 14px;
+    margin-bottom: 5px;
+   
+}
+
+.itemValue{
+    font-weight: 500;
+}

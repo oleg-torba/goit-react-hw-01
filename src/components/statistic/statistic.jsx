@@ -9,8 +9,8 @@ return (<section className={statsCss.statistic}>
     {stats.map(({id, label, percentage})=>{
         return (
         <li  className={statsCss.list} key={id}>
-            <span>{label}</span>
-            <span>{percentage}</span>
+            <span className={statsCss.itemTitle}>{label}</span>
+            <span className={statsCss.itemValue}>{percentage}</span>
         </li>)
         
     })}
