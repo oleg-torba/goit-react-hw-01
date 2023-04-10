@@ -17,7 +17,7 @@ export function FriendsList({ friends }) {
     </ul>
   );
 }
-FriendsList.prototypes = {
+FriendsList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

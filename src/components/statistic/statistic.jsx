@@ -4,7 +4,9 @@ import statsCss from './stats.module.css'
 export function Statistic ({title, stats}){
 return (
    <section className={statsCss.statistic}>
-        <h2>{title}</h2>
+        {title&&(
+            <h2>{title}</h2>
+        )}
 
         <ul className={statsCss.item}>
             {stats.map(({ id, label, percentage }) => {

@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './transactions.module.css'
 
 export function Transaction({ items }) {
@@ -26,12 +26,12 @@ export function Transaction({ items }) {
 }
 
 Transaction.propTypes = {
-  items: propTypes.arrayOf(
-    propTypes.shape({
-      type: propTypes.string.isRequired,
-      amount: propTypes.string.isRequired,
-      currency: propTypes.string.isRequired,
-      id: propTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
     })
   ),
 };
